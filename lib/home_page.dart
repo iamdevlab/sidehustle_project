@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                "primedcoderz@gmail.com",
+                "group15@internship.com",
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.blue[800],
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                "facebook.com/iamdevlab",
+                "facebook.com/group15",
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.blue[800],
@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                "@grimconscript",
+                "@group15",
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.blue[800],
