@@ -29,8 +29,12 @@ class HomePage extends StatelessWidget {
                         child: Container(
                           height: 80,
                           width: 70,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: Colors.green),
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.blue),
+                          child: const CircleAvatar(
+                            radius: 80,
+                            backgroundImage: AssetImage("assets/vader.jpg"),
+                          ),
                         ),
                       ),
                     ),
@@ -42,7 +46,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Container(
                               alignment: Alignment.centerLeft,
-                              child: Text(
+                              child: const Text(
                                 "Group 15",
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
@@ -125,7 +129,7 @@ class HomePage extends StatelessWidget {
             ),
             InfoTile(
               leading_icon: Icon(
-                Icons.person_search_outlined,
+                Icons.people,
                 color: Colors.blue[800],
               ),
               title: Text("Invite Friends"),
