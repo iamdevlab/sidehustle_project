@@ -20,8 +20,8 @@ class TextFieldTwo extends StatelessWidget {
           fillColor: Colors.white,
           hintText: hintInput,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(40.0),
-          ),
+              borderRadius: BorderRadius.circular(40.0),
+              borderSide: BorderSide.none),
         ),
       ),
     );
