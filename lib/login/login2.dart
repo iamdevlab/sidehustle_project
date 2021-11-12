@@ -9,10 +9,13 @@ class LoginPage2 extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blueGrey[200],
+
+        //SingleChildscrollview enables a scrollable screen
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              //welcome text wrapped in padding widgets
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Text(
@@ -21,6 +24,8 @@ class LoginPage2 extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
               ),
+
+              //sub welcome text wrapped in padding widgets
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Text(
@@ -28,6 +33,11 @@ class LoginPage2 extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+
+              /**
+               * class returning a textfield, the textfiels has been 
+               * extracted to avoid redundancy and maintain consistency 
+               */
               TextFieldTwo(
                 hintInput: "Enter your full name",
                 isPassword: false,
@@ -44,6 +54,12 @@ class LoginPage2 extends StatelessWidget {
                 hintInput: "Confirm password",
                 isPassword: true,
               ),
+
+              /**
+               * The richtext widget is used to combine multiple text 
+               * widget using the textspan, this allows for combining different
+               * text which can have different properties
+               */
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: RichText(
@@ -59,6 +75,8 @@ class LoginPage2 extends StatelessWidget {
                       ]),
                 ),
               ),
+
+              //this is a container whise child is a textbutton widget
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -80,11 +98,3 @@ class LoginPage2 extends StatelessWidget {
     );
   }
 }
-
-// RichText(
-//             text: TextSpan(
-//               text: 'Hello ',
-//               style: DefaultTextStyle.of(context).style,
-//               children: <TextSpan>[
-//                 TextSpan(text: 'Geeks', style: TextStyle(fontWeight: FontWeight.bold)),
-//               ],
