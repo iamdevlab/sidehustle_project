@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sd_project/login/widgets/text_field2.dart';
+import 'package:sd_project/widgets/text_field2.dart';
 
 class LoginPage2 extends StatelessWidget {
   const LoginPage2({Key? key}) : super(key: key);
@@ -9,12 +9,15 @@ class LoginPage2 extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blueGrey[200],
-
         //SingleChildscrollview enables a scrollable screen
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                height: 100,
+              ),
+
               //welcome text wrapped in padding widgets
               Padding(
                 padding: const EdgeInsets.all(12.0),

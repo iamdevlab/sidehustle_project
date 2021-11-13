@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sd_project/login/login2.dart';
+import 'package:sd_project/login/login3.dart';
 import 'package:sd_project/login/login_page.dart';
 
 import 'home_page.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: LoginPage2(),
+      home: LoginPage3(),
     );
   }
 }
