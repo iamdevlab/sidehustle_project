@@ -4,10 +4,10 @@ This project is maintained by Group15 of the SideHustle Cohort 4.0
 
 ## Contributors
 
-Vernon Usigbe
-Charles Sedenu
-Felix Nkwuzor
-Idegbekwu oluwaseyi Isaiah
-Akanang David Ignatius
+Vernon Usigbe,
+Charles Sedenu,
+Felix Nkwuzor,
+Idegbekwu oluwaseyi Isaiah,
+Akanang David Ignatius,
 
 ![alt text](assets/screenshot1.jpeg "Login page screenshot")
