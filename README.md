@@ -10,4 +10,4 @@ Felix Nkwuzor,
 Idegbekwu oluwaseyi Isaiah,
 Akanang David Ignatius,
 
-![alt text](assets/screenshot1.jpeg "Login page screenshot")
+![alt text](assets/screenshot2.png "Login page screenshot")
