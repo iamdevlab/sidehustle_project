@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "29786663940",
+    "project_id": "sidehustle-prototype",
+    "storage_bucket": "sidehustle-prototype.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29786663940:android:f60041c007f93376f95951",
+        "android_client_info": {
+          "package_name": "com.vernon.sd_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29786663940-cb4ldb5p48av9offvt92ree1fhva70np.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBISSoB9bd0wd4kROfy79_P8Juj8bYgcpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29786663940-cb4ldb5p48av9offvt92ree1fhva70np.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
