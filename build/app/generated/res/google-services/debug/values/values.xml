@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">29786663940-cb4ldb5p48av9offvt92ree1fhva70np.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">29786663940</string>
+    <string name="google_api_key" translatable="false">AIzaSyBISSoB9bd0wd4kROfy79_P8Juj8bYgcpw</string>
+    <string name="google_app_id" translatable="false">1:29786663940:android:f60041c007f93376f95951</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBISSoB9bd0wd4kROfy79_P8Juj8bYgcpw</string>
+    <string name="google_storage_bucket" translatable="false">sidehustle-prototype.appspot.com</string>
+    <string name="project_id" translatable="false">sidehustle-prototype</string>
+</resources>

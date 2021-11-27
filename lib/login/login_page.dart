@@ -1,8 +1,14 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sd_project/services/firebase_auth.dart';
+import 'package:sd_project/services/locator.dart';
+import 'package:sd_project/services/router.router.dart';
 import 'package:sd_project/widgets/login_input.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -12,8 +18,16 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final firebaseAuth = FirebaseAuth.instance;
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  final NavigationService _navService = locator<NavigationService>();
+
   @override
   Widget build(BuildContext context) {
+    final authProv = Provider.of<FireBaseAuthService>(context);
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.orange[50],
@@ -66,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    "SIGN IN",
+                    "LOG IN",
                     style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
@@ -88,29 +102,16 @@ class _LoginPageState extends State<LoginPage> {
                  * full class details
                  */
                 InputField(
-                  icon: Icon(EvaIcons.person, color: Colors.yellow),
-                  hinttext: "Username",
+                  icon: Icon(EvaIcons.email, color: Colors.yellow),
+                  hinttext: "email",
                   boolValue: false,
+                  textEditingController: emailController,
                 ),
                 InputField(
                   icon: Icon(Icons.lock_open_rounded, color: Colors.yellow),
                   hinttext: "Password",
                   boolValue: true,
-                ),
-
-                /*This row will hold two text for the forget password 
-                and signup, they will both be clickable in future
-                */
-                Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: <Widget>[
-                      Flexible(child: Text("Forget Password?")),
-                      Flexible(child: Text("Sign-Up")),
-                    ],
-                  ),
+                  textEditingController: passwordController,
                 ),
 
                 /**
@@ -128,7 +129,10 @@ class _LoginPageState extends State<LoginPage> {
                           colors: [Colors.orange[600]!, Colors.orange[100]!]),
                       borderRadius: BorderRadius.all(Radius.circular(40))),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        await authProv.signIn(
+                            emailController.text, passwordController.text);
+                      },
                       child: Text(
                         "LOG IN",
                         style: TextStyle(
@@ -137,6 +141,38 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       )),
                 ),
+
+                /*This row will hold two text for the forget password 
+                and signup, they will both be clickable in future
+                */
+                Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: <Widget>[
+                      Text(
+                        "Forget Password?",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      GestureDetector(
+                          onTap: () {
+                            _navService.navigateTo(Routes.signUp);
+                          },
+                          child: Text(
+                            "Sign-Up",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
+                    ],
+                  ),
+                ),
+
                 Container(
                     height: 200,
                     decoration: BoxDecoration(),
